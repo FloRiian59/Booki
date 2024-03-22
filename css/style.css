@@ -266,55 +266,91 @@ button::before {
     width: 65%;
 }
 
-.hebergements-title {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
+.hebergements h2 {
+    font-size: 22px;
+    font-weight: 700;
+    margin: 0;
+    margin-bottom: 30px;
 }
 
-.hebergements-cards {
-    display:grid
+.grid-hebergements {
+    display: grid;
+    gap: 35px 35px;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-areas:
+    "card1 card2 card3"
+    "card4 card5 card6";
 }
 
-.hebergements-cards .card {
-    display: flex;
-    flex-direction: column;
-    background-color: #ffffff;
-    margin-top: 33px;
-    box-shadow: 0px 3px 15px 0px #0000001A;
-    border-radius: 15px;
-    padding: 5px 5px 15px 5px;
-    width: 30%;
+.card1 {
+    grid-area: card1;
 }
 
-.hebergements-cards img {
-    border-radius: 15px 15px 0px 0px;
+.card2 {
+    grid-area: card2;
+}
+
+.card3 {
+    grid-area: card3;
+}
+
+.card4 {
+    grid-area: card4;
+}
+
+.card5 {
+    grid-area: card5;
+}
+
+.card6 {
+    grid-area: card6;
+}
+
+.hebergements .card {
+    height: 200px;
+}
+
+.hebergements img {
+    border-radius:  15px 15px 0px 0px ;
     margin: auto;
     object-fit: cover;
     width: 100%;
     height: 115px;
 }
 
-.hebergements-cards .card-content {
-    width: 67%;
-    padding-left: 15px;
+.hebergements h3 {
+    font-size: 16px;
+    margin: 5px 0px 0px 5px;
+}
+
+
+.hebergements p {
+    margin: 5px 0px 0px 5px;
+    box-sizing: border-box;
+}
+
+.hebergements .card-rating {
+    box-sizing: border-box;
+    margin-top: 5px;
+    margin-left: 5px;
+}
+
+.hebergements .card-content {
+    width: 100%;
     display: flex;
     flex-direction: column;
     justify-content: space-between;
     box-sizing: border-box;
 }
 
-.hebergements-cards .card-title {
-    margin-top: 10px;
-    margin-bottom: 4px;
-}
-
-.hebergements-cards .card-subtitle {
-    margin: 0;
-}
-
-.hebergements-cards .card-rating {
-    margin-bottom: 5px;
+.afficherplus {
+    display: block;
+    font-size: 18px;
+    margin-top: 40px;
+    margin-bottom: 20px;
+    font-weight: 700;
+    line-height: 21.13px;
+    text-align: left;
 }
 
 /****** Populaires ***********/
@@ -362,8 +398,108 @@ button::before {
     margin-bottom: 5px;
 }
 
+/****** Activitées ********/
 
+.activites-container {
+    height: 100%;
+    display: flex;
+    flex-flow: wrap;
+    justify-content: space-between;
+    flex-wrap: nowrap;
+}
 
+.activites {
+    max-width: 1440px;
+    margin: auto;
+    padding: 0px 50px 0px 50px;
+}
+
+.activites h2 {
+    font-size: 22px;
+}
+
+.activites-card-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    width: 25%;
+    padding-right: 30px;
+}
+  
+.activites-card {
+    box-shadow: 0px 3px 15px 0px #0000001A;
+    background-color: #fff;
+    border-radius: 15px;
+    margin-bottom: 15px;
+    position: relative;
+    overflow: hidden;
+}
+  
+.activites-card a{
+    text-decoration: none;
+}
+  
+.activites-card img {
+    border-top-left-radius: 15px;
+    border-top-right-radius: 15px;
+}
+  
+.activites-card h3 {
+    width: 100%;
+    background-color: #fff;
+    color: #000;
+    margin: 0;
+    padding: 20px;
+    font-size: 16px;
+}
+  
+.activite1 img {
+    object-fit: cover;
+    width: 100%;
+    height: 390px;
+}
+
+/****** Footer ******/
+
+footer {
+    background-color: var(--main-bg-color);
+    padding: 10px 20px 0px 20px;
+
+}
+
+.footer-container h2 {
+    font-size: 18px;
+    font-weight: 700;
+    line-height: 21.13px;
+    text-align: left;
+}
+
+.footer-container {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+footer article {
+    width: 33.3%;
+}
+
+footer ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+footer ul > li a {
+    text-decoration: none;
+    padding-bottom: 10px;
+    display: block;
+    color : black;
+    font-weight: 400;
+    font-size: 16px;
+}
+
+footer ul > li a:hover {
+    color:var(--main-color);
+}
 
 /* Le code ci-dessous correspond à la version responsive uniquement */
 
@@ -400,6 +536,7 @@ button::before {
     .populaires-cards .card-subtitle {
         font-size: 13px;
     }
+
 }
 
 /* Small devices (phones, less than 768px) */
