@@ -412,7 +412,7 @@ button::before {
     overflow: hidden;
     box-sizing: border-box;
 }
-  
+
 .activites-card a{
     text-decoration: none;
 }
@@ -539,6 +539,7 @@ footer ul > li a:hover {
 @media (max-width: 768px) {
     
     body {
+        margin-top: 0px;
         margin-left: 0px;
         margin-right: 0px;
     }
@@ -621,7 +622,7 @@ footer ul > li a:hover {
     }
 
     form {
-        padding-left: 20px;
+        justify-content: center;
     }
 
     button {
